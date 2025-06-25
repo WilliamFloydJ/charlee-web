@@ -1,27 +1,31 @@
-import React, { useEffect, useState } from "react";
-import HeaderSpace from "./HeaderSpace";
+import "../CSS/CSS-Header.css";
 
-const Header = ({ pageNum = 0 }) => {
-  useEffect(() => {
-    const headerSpaces = document.getElementById("HeaderSpaces");
-    const page = headerSpaces.children.item(pageNum);
-    page.classList.add("page-selected");
-  }, []);
+import React from "react";
 
+const Header = () => {
   return (
-    <div className="header-div">
-      <div className="title">
-        <div className="logo-img">
-          <a href="/"></a>
+    <div className="Main-Header">
+      <div className="Header-Top">
+        <div></div>
+        <div className="Header-Logo">
+          <img src="/Icon.svg" />
+          <h3>CHARLEE'S CLEANING</h3>
         </div>
+        <div className="Header-Links"></div>
       </div>
-      <div className="nav-container">
-        <ul id="HeaderSpaces">
-          <HeaderSpace hrefLink="/" spanName="HOME" />
-          <HeaderSpace hrefLink="/About" spanName="ABOUT" />
-          <HeaderSpace hrefLink="/Services" spanName="SERVICES" />
-          <HeaderSpace hrefLink="/Blog" spanName="BLOG" />
-          <HeaderSpace hrefLink="/Contact" spanName="CONTACT" />
+      <div className="Header-Bottom">
+        <ul>
+          <div>
+            <h3>HOME</h3>
+          </div>
+          <hr />
+          <div>
+            <h3>SERVICES</h3>
+          </div>
+          <hr />
+          <div className="Header-Contact">
+            <h3>CONTACT</h3>
+          </div>
         </ul>
       </div>
     </div>
